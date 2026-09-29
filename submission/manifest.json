@@ -86,8 +86,8 @@
     },
     {
       "file": "r2_qa/qa_review.md",
-      "lines": 38,
-      "sha256": "bcc8079c4edf82cc998b9fb47ed831f823ed75556206cd506b8e435da2b6e610"
+      "lines": 51,
+      "sha256": "88ce5bb0039a9c55938537feb159d5a9b8e64f63f86f0181bdf333a225760b29"
     },
     {
       "file": "r2_qa/qa_overlay.html",
@@ -167,8 +167,8 @@
     },
     {
       "file": "40_decision_log.csv",
-      "lines": 15,
-      "sha256": "3a0ca1a26629f33b21858916a14e5860bdb72a7a34c82983f1a52c39cd8f4410"
+      "lines": 16,
+      "sha256": "e038d628946dc2f05cbc16093696cf57d0e5156e2458d97aaa9f89bd89b1e2ae"
     },
     {
       "file": "45_review_plan.md",

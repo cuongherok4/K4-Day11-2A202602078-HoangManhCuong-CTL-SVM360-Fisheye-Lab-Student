@@ -13,3 +13,5 @@ Conflict mismatching_attributes của L11/006840 và L8/056040 liên quan occlud
 Quyết định: D4 yêu cầu A sửa geometry xe lớn theo ảnh và export v2; D2/D3/D5/D6/D7/D8 cần bằng chứng/phê duyệt bổ sung, giữ hiện trạng và lưu escalation. E0 ở L6/056040 là giả thuyết reference thiếu người áo hồng; E4 ở model là giả thuyết lệch taxonomy/rider, không khẳng định nguyên nhân huấn luyện. E5 ghi rõ phép kiểm tiếp theo. Xem 40_decision_log.csv và 30_escalation_ticket.md.
 
 P4 hoàn tất phân tích hiện có; P5/v2 và kiểm tích hợp cuối P6 chưa hoàn tất. Không tạo export giả hoặc số delta trước/sau khi chưa có bản A sửa.
+
+Cập nhật sau P5: v2 đã khóa `8D7F-BEDD`; D14 xử lý D4 (L9/056040), D12 thay D7 (gộp L6 vào L7), D11 đổi L11 sang Bus nhưng vẫn escalated vì R4 là ThreeWheeler, D13 thu L7/006840. Số trước/sau trong `rework/delta.md` giữ nguyên, không sửa ngược để khớp reference.
