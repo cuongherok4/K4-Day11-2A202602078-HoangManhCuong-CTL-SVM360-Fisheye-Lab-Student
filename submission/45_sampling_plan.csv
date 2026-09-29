@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,25,"thấp–trung bình: xe/người ở center–mid, ít cắt biên","Phủ các dạng giao thông phổ biến phía trước (ô tô, xe ba bánh, xe máy ở cự ly trung bình) để có mốc so sánh; chọn rải theo ngày/tuyến, mỗi clip tối đa vài frame cách nhau ≥2 s để tránh frame liền nhau cùng cảnh."
-front,hard,30,"cao: xe máy chen sát, cụm người/xe dày, ngược sáng, xe ba bánh bị nhầm Bus/Truck","Ở slice ADASIND quan sát thấy xe ba bánh ở xa khó phân biệt với minibus/van và người lái bị che bởi xe khác; front là camera dùng nhiều nhất cho cảnh báo va chạm nên dành phần hard lớn nhất."
-rear,normal,20,"thấp: phần lớn là xe đi cùng chiều ở giữa khung","Rear ít đối tượng hơn trong đỗ/lùi thông thường; đủ mẫu normal để đo độ ổn định, chọn cả cảnh ban ngày và bãi đỗ."
-rear,hard,25,"trung bình–cao: xe máy vượt sát, người đi bộ sau xe khi lùi, bóng/nguồn sáng đèn pha","Ca lùi xe có người đi bộ ở rìa vòng kính là rủi ro an toàn cao; vật gần camera bị méo và bị vòng kính cắt nên dễ sai truncated và hình học."
-left,normal,20,"trung bình: vật đi song song, thường ở mid","Camera hông nhìn làn bên và lề đường; normal gồm xe đỗ lề, người đi bộ trên vỉa hè ở cự ly vừa."
-left,hard,30,"cao: seam trước-trái/sau-trái, vật rất gần bị cắt, thân xe ego và tay người lái che","Ở ADASIND thân xe/cánh tay người lái chiếm góc dưới trái và xe máy sát bên bị cắt ở mép; ở SVM các vật ở seam xuất hiện trên hai camera nên cần nhiều ca để viết policy ghép box."
-right,normal,20,"trung bình: xe đỗ lề, cửa hàng, người đi bộ","Tương tự left nhưng phía lề đường (giao thông bên trái): nhiều xe đỗ, xe ba bánh dừng đón khách."
-right,hard,30,"cao: seam trước-phải/sau-phải, xe ba bánh sát bên che nửa khung, người đu bám ngoài xe","Frame ADASIND 056040 có xe ba bánh chiếm nửa phải khung với người đu bám ngoài thân xe (luật R03 chưa rõ); cần đủ ca hard để thống nhất guideline trước khi gọi gold."
+front,normal,25,"Mốc so sánh trong điều kiện thông thường, chưa có tần suất lỗi đo được",Phủ xe/người không che nhiều và ánh sáng đủ; rải clip/ngày/tuyến. Giữ 25 mẫu làm mốc mô tả trong ngân sách giả lập.
+front,hard,30,"Ưu tiên review vật nhỏ, che khuất, ngược sáng và nhầm class","30 mẫu để kiểm phân biệt ThreeWheeler/Bus/Car và rider; gợi ý dạng lỗi từ 006840, không coi ảnh này là camera front hoặc bằng chứng camera nào nguy hiểm hơn."
+rear,normal,20,"Mốc so sánh cảnh phía sau, chưa biết mật độ vật thực tế",20 mẫu phủ cảnh xe đi/lùi trong kịch bản với ánh sáng đủ và ít che; không giả định rear luôn ít vật hơn front.
+rear,hard,25,"Ưu tiên review người bị che, đèn pha và cắt biên khi lùi",25 mẫu cho các tình huống giả định cần soi; dùng metadata trạng thái xe khi có. Zone edge không chứng minh vật gần xe hay mức rủi ro an toàn.
+left,normal,20,Mốc so sánh góc hông trái,"20 mẫu xe/người cạnh xe trong điều kiện dễ đọc; xác nhận camera_id từ metadata, không dùng vị trí trái của ảnh ADASIND."
+left,hard,30,"Ưu tiên review seam trước-trái/sau-trái, che bởi thân xe, méo/cắt biên",30 mẫu bao ca seam đồng bộ và mask ego phù hợp xe SVM thực tế; không bê cánh tay/tay lái của ADASIND thành mask camera ô tô.
+right,normal,20,Mốc so sánh góc hông phải,"20 mẫu xe/người bên hông với ánh sáng đủ; cân bằng bối cảnh theo dữ liệu thật, không suy chiều giao thông hoặc phía lề đường từ ba ảnh."
+right,hard,30,"Ưu tiên review seam, xe lớn che cảnh và tình huống người ngoài khoang","30 mẫu để kiểm hình học và khoảng trống rule kiểu 056040; đây là nguồn gợi ý ca khó, không chứng minh 056040 thuộc camera right."
