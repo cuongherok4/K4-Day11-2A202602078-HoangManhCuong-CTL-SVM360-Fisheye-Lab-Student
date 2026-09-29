@@ -37,7 +37,7 @@ Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thu
 
 - Một ca đã phân xử: [Frame/object/rule; ý kiến A/B; bằng chứng; quyết định và link]
 - Ca còn mở: [Nội dung, người theo dõi, phép kiểm tiếp theo; nếu không còn thì ghi rõ]
-- Đóng góp của A/B/C vào kế hoạch và exit ticket: [Điền phần việc thực tế]
+- Đóng góp của A/B/C vào kế hoạch và exit ticket: nháp `45_sampling_plan.csv` và `46_gold_set_plan.md` do A soạn (có AI hỗ trợ) trong lúc chờ QA, dựa trên quan sát khi gán nhãn; C (Trung) kiểm, chỉnh lý do và bổ sung sau P4. [C điền phần đã sửa]
 - Thay đổi phân công nếu có: nhóm ban đầu làm theo lộ trình solo đến P2, sau đó chuyển sang nhóm 3 người (A/B/C) trước khi B QA.
 
 ## 5. Xác nhận trước khi nộp
