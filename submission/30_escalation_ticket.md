@@ -15,7 +15,8 @@ Người soạn: vai C (Trung), Codex hỗ trợ theo yêu cầu. Các ticket đ
 - **Ảnh chụp:** `submission/screenshots/trung-diag-006840.png`, `long-qa-006840.png`.
 - **Expected impact:** L/R gọi ThreeWheeler, M gọi Bus; quyết định sai có thể che lỗi reference hoặc đổi nhãn đúng thành sai.
 - **Owner:** guideline.
-- **Recommendation:** giữ ThreeWheeler tạm thời; kiểm đặc điểm bánh/thân/kiểu xe với nguồn ảnh đủ rõ. Nếu không phân xử được, giữ unresolved ngoài tập gold; không bỏ vật ≥40 px chỉ vì class khó. Trạng thái: escalated.
+- **Cập nhật P5:** A soát lại ảnh và đổi L11 sang Bus trong v2 (D11: thân hình hộp, kính chắn gió rộng, kích thước gần L9 cùng khoảng cách); R4 vẫn ThreeWheeler nên delta center matched 10→9. Không dùng M12 làm căn cứ.
+- **Recommendation:** guideline owner phân xử ThreeWheeler/Bus; kiểm đặc điểm bánh/thân/kiểu xe với nguồn ảnh đủ rõ. Nếu không phân xử được, giữ unresolved ngoài tập gold; không bỏ vật ≥40 px chỉ vì class khó. Trạng thái: escalated.
 
 ## Ticket 3 — Ignore của reference khác bản người gán (D8)
 - **Frame:** adasind_006840.jpg L10, Car (232,828)–(262,872), H=44.

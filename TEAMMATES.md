@@ -31,7 +31,7 @@ Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thu
 | P3 · Chốt QA mù | B → C, A | [review](submission/r2_qa/qa_review.md), QA-L01–03 trong findings, screenshots/long-qa-*.png; mã 1277-D599 | B kiểm SHA, 24 box/3 frame, ignore và rule; chưa xem reference/model B1-center, đã đọc self-QC của A (giới hạn độc lập ghi trong review) | P3 hoàn tất; A xem hình học L9/056040, C phân xử người ngoài xe và class L11/006840; chưa kiểm v2 |
 | P4 · Quyết định sửa | C → A, B | [decision log](submission/40_decision_log.csv), [handoff](submission/r3_diag/handoff.md), r3_diag | So khớp SHA r1, chất lượng 19 TP/4 FP/1 FN; triage hợp lệ; D4 là việc A sửa, các ca mở có owner/phép kiểm tiếp | P4 đã có phân tích; escalation chưa được owner bên ngoài phản hồi |
 | P5 · Kiểm bản sửa | A → B → C | `rework/annotations-v2.xml`, `lock2.txt` (8D7F-BEDD), `delta.md`; decision log D11–D15 | [B điền: đã kiểm lại L9, L11, L6/L7 056040, L7 006840] | v2 sửa 4 ca (L9 geometry, L11 → Bus, gộp L6 vào L7, thu L7 006840). delta: center matched 10→9, edge 3→2 do bất đồng class/IoU với reference, giữ nguyên số; chờ B xác nhận |
-| P6 · Chốt nộp | A, B → C | manifest.json; guideline patch, escalation, sampling/review/gold plan, exit ticket | Kiểm local còn thiếu 3 file rework; chưa đủ điều kiện chốt nộp | Chờ A xuất/khóa v2, B kiểm lại; chưa commit/push phần C theo yêu cầu người dùng |
+| P6 · Chốt nộp | A, B → C | manifest.json; guideline patch, escalation, sampling/review/gold plan, error card, exit ticket | Đủ 3 file rework (v2, lock2 8D7F-BEDD, delta); error card/escalation/review plan/exit ticket đã cập nhật theo v2; check ✓ hình thức đầy đủ | Chờ B kiểm lại ca sửa, B/C tick xác nhận, C push commit chốt và gửi link |
 
 ## 4. Bất đồng và phối hợp
 
@@ -42,7 +42,7 @@ Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thu
 
 ## 5. Xác nhận trước khi nộp
 
-- [ ] A xác nhận nhãn và export đúng phiên bản: [Tên / bằng chứng]
+- [x] A xác nhận nhãn và export đúng phiên bản: Hoàng Mạnh Cường — `submission/r1_craft/` (lock 1277-D599), `submission/rework/` (lock 8D7F-BEDD), đều export từ CVAT task 75; lý do sửa ở decision log D11–D15
 - [ ] B xác nhận đã QA độc lập trước reference và kiểm lại ca sửa: Hoàng Văn Long (`HvLonggg`) — đã QA độc lập trước reference trong [qa_review.md](submission/r2_qa/qa_review.md), 3 finding QA-L01–03 trong `submission/findings.csv`; chưa có bản `rework/` v2 để kiểm lại.
 - [ ] C xác nhận báo cáo đúng bản khóa, các file đầy đủ và check exit 0: [Tên / bằng chứng]
 - [ ] manifest.json tại commit chốt có failed_gates rỗng.

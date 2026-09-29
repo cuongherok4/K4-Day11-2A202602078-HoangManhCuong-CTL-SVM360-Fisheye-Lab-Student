@@ -5,7 +5,7 @@ Vai C rà báo cáo r1 khóa 1277-D599, không suy rủi ro an toàn từ zone.
 | Lát cắt / frame | Số ca và loại lỗi | Vì sao review trước | Bằng chứng cần giữ |
 |---|---|---|---|
 | 006840 — người bị che, xe nhỏ khó phân lớp | Local quality: 8 TP, 2 FP, 1 FN. Ba dòng compare: L10 IGNORE_SCOPE, L1 SPURIOUS, L5+R7 BOX_GEOMETRY. L11/R4/M12 thêm bất đồng class ba nguồn. | Scope R loại L10 khỏi mẫu số; L5/R7 đổi cách ghép theo IoU. Cần phân xử trước sửa để tránh xóa nhãn đúng hoặc thêm box trùng. | XML r1, reference.txt, local_quality_conflicts.csv, trung-diag-006840.png, D3/D5/D8. |
-| 056040 — xe lớn bị cắt và người sát xe | Local quality: 7 TP, 2 FP, 0 FN; L4/L6 báo SPURIOUS. QA-L01 thêm geometry L9; QA-L02 là khoảng trống R03. | L9 cần sửa theo phần xe nhìn thấy dù ghép với R vẫn qua 0.5; L6 có khả năng reference thiếu người. Tách lỗi nhãn, rule và model. | long-qa-056040.png, trung-diag-056040.png, D2/D4/D6/D7; giữ v1 và v2 để B soát lại. |
+| 056040 — xe lớn bị cắt và người sát xe | Local quality: 7 TP, 2 FP, 0 FN; L4/L6 báo SPURIOUS. QA-L01 thêm geometry L9; QA-L02 là khoảng trống R03. | L9 cần sửa theo phần xe nhìn thấy dù ghép với R vẫn qua 0.5; L6 ban đầu nghi reference thiếu người; soát lại (D12) thấy là một người nên gộp vào L7 ở v2. Tách lỗi nhãn, rule và model. | long-qa-056040.png, trung-diag-056040.png, D2/D4/D6/D7; giữ v1 và v2 để B soát lại. |
 
 036720 có 4 TP/0 FP/0 FN nhưng model vẫn tách rider và bỏ xe lớn; dùng làm ca kiểm đối chứng chứ không coi frame hoàn hảo theo mọi tiêu chí. Ba frame B1-center không đại diện cho các block khác hoặc hệ bốn camera. Số issue trong findings có thể lặp cùng vật qua vai/nguồn; không dùng tổng dòng làm tỷ lệ lỗi vật.
 
