@@ -1,1 +1,2 @@
 id,date,question,decision,rationale,status
+D1,2026-09-29,"r1_craft đã khóa 5375-843D nhưng lock.txt ghi prefill_kept=24/new=0 vì CVAT gán source=file cho mọi hình nạp qua Upload annotations; có cần khóa lại?","Relock r1_craft bằng export mới của cùng task 75, trong đó mọi hình tự vẽ/sửa được đánh dấu source=manual (lens_border giữ source=file)","Đã so sánh hai export: 36 hình giống hệt về nhãn, toạ độ, group_id và attribute; chỉ khác trường source. Relock trước khi QA/mở reference slice nên không ảnh hưởng tính độc lập; mã cũ 5375-843D bị thay",closed

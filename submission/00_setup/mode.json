@@ -1,0 +1,15 @@
+{
+  "members": [
+    "cuong"
+  ],
+  "assignments": {
+    "cuong": "B1-center"
+  },
+  "self": "cuong",
+  "slice": "B1-center",
+  "degrade": [],
+  "current_slice": "C0",
+  "support_prefill": false,
+  "support_slice": "",
+  "prefill_box_ids": []
+}

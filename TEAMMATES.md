@@ -1,0 +1,50 @@
+# Thành viên và phân vai — Day11 SVM 360 Fisheye
+
+## 1. Thông tin nhóm
+
+- Khóa/lớp: K4 · VinUni AI20k
+- Tên nhóm: CTL
+- Repo Public: https://github.com/cuongherok4/K4-Day11-2A202602078-HoangManhCuong-SVM360-Fisheye-Lab-Student
+- Máy giữ hồ sơ chính / người quản lý: máy của Hoàng Mạnh Cường (vai A) — giữ CVAT local (task 73 parking, 74 C0, 75 B1-center), `data/`, `exports/` và `submission/` chính thức
+- Slice chung lấy từ mode.json: `B1-center` (adasind_006840, adasind_036720, adasind_056040)
+- Tên định danh vai A dùng cho --self: `cuong` (mode chạy với một tên trước khi chốt nhóm; không chạy lại `mode` để giữ nguyên slice và các bản khóa)
+- Kênh trao đổi nội bộ: [Điền]
+- Đại diện nộp (vai C): Trịnh Nam Trung, 2A202602113
+- Commit chốt bài: [SHA hoặc URL commit]
+
+## 2. Ba vai chính
+
+| Vai | Họ và tên | MSSV | Tên định danh trong mode | Trách nhiệm | Bằng chứng đóng góp |
+|---|---|---|---|---|---|
+| A · Gán nhãn | Hoàng Mạnh Cường | 2A202602078 | cuong | Parking/C0/slice, self-QC, lock, rework | `submission/parking/`, `submission/p1_calib/`, `submission/r1_craft/` (lock `1277-D599`), dòng `calib`/`r1_craft` trong `findings.csv` |
+| B · QA độc lập | Hoàng Văn Long | 2A202602071 | long | Review trước reference, finding QA, kiểm lại ca sửa | [Link file/commit và mô tả phần đã làm] |
+| C · Chẩn đoán & điều phối | Trịnh Nam Trung | 2A202602113 | trung | Báo cáo, phân xử, kế hoạch, tích hợp, check và nộp | [Link file/commit và mô tả phần đã làm] |
+
+Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thuộc quy trình nhiều hồ sơ của CLI; nhóm dùng một slice chung và quy trình A → B → C đã nêu trong hướng dẫn.
+
+## 3. Bàn giao theo pha
+
+| Mốc | Người giao → nhận | File / commit / mã khóa | Người nhận đã kiểm gì? | Trạng thái / vướng mắc |
+|---|---|---|---|---|
+| P0 · Chốt môi trường và vai | C → A, B | `00_setup/mode.json` (slice B1-center), `sensor_context.md`, parking | [Điền] | Parking + sensor_context đã có; sampling plan chưa làm |
+| P2 · Khóa bản đầu | A → B, C | `r1_craft/annotations.xml`, `lock.txt`, slice B1-center, code `1277-D599` (relock từ `5375-843D`, lý do ở decision log D1) | [Điền] | [Điền] |
+| P3 · Chốt QA mù | B → C, A | [review, findings, ảnh, commit] | [Điền] | [Điền] |
+| P4 · Quyết định sửa | C → A, B | [finding, decision log, commit] | [Điền] | [Điền] |
+| P5 · Kiểm bản sửa | A → B → C | [v2, lock2, review kiểm lại, delta] | [Điền] | [Điền] |
+| P6 · Chốt nộp | A, B → C | [manifest, commit chốt] | [Điền] | [Điền] |
+
+## 4. Bất đồng và phối hợp
+
+- Một ca đã phân xử: [Frame/object/rule; ý kiến A/B; bằng chứng; quyết định và link]
+- Ca còn mở: [Nội dung, người theo dõi, phép kiểm tiếp theo; nếu không còn thì ghi rõ]
+- Đóng góp của A/B/C vào kế hoạch và exit ticket: [Điền phần việc thực tế]
+- Thay đổi phân công nếu có: nhóm ban đầu làm theo lộ trình solo đến P2, sau đó chuyển sang nhóm 3 người (A/B/C) trước khi B QA.
+
+## 5. Xác nhận trước khi nộp
+
+- [ ] A xác nhận nhãn và export đúng phiên bản: [Tên / bằng chứng]
+- [ ] B xác nhận đã QA độc lập trước reference và kiểm lại ca sửa: [Tên / bằng chứng]
+- [ ] C xác nhận báo cáo đúng bản khóa, các file đầy đủ và check exit 0: [Tên / bằng chứng]
+- [ ] manifest.json tại commit chốt có failed_gates rỗng.
+- [ ] Repo nhóm Public, ảnh và các bằng chứng mở được.
+- [ ] C đã push và gửi link repo nhóm + commit qua kênh lớp công bố.
