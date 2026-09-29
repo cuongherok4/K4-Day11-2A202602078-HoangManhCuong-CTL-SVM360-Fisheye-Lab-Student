@@ -43,7 +43,7 @@ Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thu
 ## 5. Xác nhận trước khi nộp
 
 - [ ] A xác nhận nhãn và export đúng phiên bản: [Tên / bằng chứng]
-- [ ] B xác nhận đã QA độc lập trước reference và kiểm lại ca sửa: [Tên / bằng chứng]
+- [ ] B xác nhận đã QA độc lập trước reference và kiểm lại ca sửa: Hoàng Văn Long (`HvLonggg`) — đã QA độc lập trước reference trong [qa_review.md](submission/r2_qa/qa_review.md), 3 finding QA-L01–03 trong `submission/findings.csv`; chưa có bản `rework/` v2 để kiểm lại.
 - [ ] C xác nhận báo cáo đúng bản khóa, các file đầy đủ và check exit 0: [Tên / bằng chứng]
 - [ ] manifest.json tại commit chốt có failed_gates rỗng.
 - [ ] Repo nhóm Public, ảnh và các bằng chứng mở được.
