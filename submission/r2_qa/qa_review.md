@@ -33,6 +33,19 @@ Bằng chứng: [056040 — raw và box](../screenshots/long-qa-056040.png), [00
 
 1. C phân xử QA-L02 và QA-L03, ghi quyết định gắn rule/evidence; việc mở reference và phân loại WHY thuộc P4.
 2. A soi và sửa QA-L01 trong CVAT nếu xác nhận, xuất v2 và khóa rework; không sửa đè XML r1 đã khóa. L02/L03 chỉ sửa theo quyết định đã ghi.
-3. B kiểm lại đúng ca sửa trên v2 và mã khóa mới, đối chiếu R02/R03/R04/R05 và ảnh gốc, rồi ghi kết quả kiểm lại. Hiện **chưa có v2 để kiểm**, chưa xác nhận hoàn tất P5.
+3. B kiểm lại đúng ca sửa trên v2 và mã khóa mới, đối chiếu R02/R03/R04/R05 và ảnh gốc, rồi ghi kết quả kiểm lại ở mục P5 bên dưới.
 
 P3 đã ghi báo cáo và 3 finding QA; đây chưa phải xác nhận toàn bộ bài đủ điều kiện nộp.
+
+## P5 kiểm lại v2
+
+B/Long đã kiểm `submission/rework/annotations-v2.xml` sau khi A khóa bản rework `8D7F-BEDD`.
+
+| frame | ca kiểm lại | kết quả |
+|---|---|---|
+| adasind_056040.jpg | QA-L01/D14, ThreeWheeler cũ L9 | Đã mở box xe từ `(597,528)-(1080,1200)` thành `(597,528)-(1080,1290)`, giữ `truncated=true`; thay đổi khớp quyết định chỉ mở theo phần xe nhìn thấy, không kéo theo bóng hoặc người ngoài xe. |
+| adasind_056040.jpg | QA-L02/D12, người áo hồng L6/L7 | V2 còn một box Pedestrian `(462,775)-(537,907)` thay cho hai box cũ L6/L7; xác nhận đã gộp theo quyết định D12. |
+| adasind_006840.jpg | QA-L03/D11, xe trắng-vàng cũ L11 | V2 đổi class thành `Bus` tại `(301,818)-(360,886)`, giữ `occluded=true`; xác nhận thay đổi đã được áp dụng, dù vẫn cần guideline owner xác nhận class cuối cùng. |
+| adasind_006840.jpg | D13, người mép trái cũ L7 | V2 thu box Pedestrian mép trái về khoảng `(19.31,827.07)-(31.95,904.07)`; xác nhận box bám phần nhìn thấy hơn bản r1. |
+
+Kết luận P5 của B: các sửa đổi trong v2 khớp các quyết định D11-D14 và không thấy sửa ngoài phạm vi đã bàn giao. Các bất đồng còn lại với teaching reference/model giữ cho C/guideline xử lý, không yêu cầu A sửa ngược chỉ để tăng delta.
