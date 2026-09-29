@@ -10,7 +10,7 @@
 - Tên định danh vai A dùng cho --self: `cuong` (mode chạy với một tên trước khi chốt nhóm; không chạy lại `mode` để giữ nguyên slice và các bản khóa)
 - Kênh trao đổi nội bộ: Zalo nhóm + trao đổi trực tiếp tại lab
 - Đại diện nộp (vai C): Trịnh Nam Trung, 2A202602113
-- Commit chốt bài: [SHA hoặc URL commit]
+- Commit chốt bài: [`4b71c7c`](https://github.com/cuongherok4/K4-Day11-2A202602078-HoangManhCuong-SVM360-Fisheye-Lab-Student/commit/4b71c7c) — `check` exit 0, `submission/manifest.json` có `failed_gates` rỗng; commit sau đó (nếu có) chỉ cập nhật TEAMMATES.md, không đổi `submission/`.
 
 ## 2. Ba vai chính
 
