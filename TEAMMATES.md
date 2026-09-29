@@ -8,7 +8,7 @@
 - Máy giữ hồ sơ chính / người quản lý: máy của Hoàng Mạnh Cường (vai A) — giữ CVAT local (task 73 parking, 74 C0, 75 B1-center), `data/`, `exports/` và `submission/` chính thức
 - Slice chung lấy từ mode.json: `B1-center` (adasind_006840, adasind_036720, adasind_056040)
 - Tên định danh vai A dùng cho --self: `cuong` (mode chạy với một tên trước khi chốt nhóm; không chạy lại `mode` để giữ nguyên slice và các bản khóa)
-- Kênh trao đổi nội bộ: [Điền]
+- Kênh trao đổi nội bộ: Zalo nhóm + trao đổi trực tiếp tại lab
 - Đại diện nộp (vai C): Trịnh Nam Trung, 2A202602113
 - Commit chốt bài: [SHA hoặc URL commit]
 
@@ -26,8 +26,8 @@ Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thu
 
 | Mốc | Người giao → nhận | File / commit / mã khóa | Người nhận đã kiểm gì? | Trạng thái / vướng mắc |
 |---|---|---|---|---|
-| P0 · Chốt môi trường và vai | C → A, B | `00_setup/mode.json` (slice B1-center), `sensor_context.md`, parking | [Điền] | Parking + sensor_context đã có; sampling plan chưa làm |
-| P2 · Khóa bản đầu | A → B, C | `r1_craft/annotations.xml`, `lock.txt`, slice B1-center, code `1277-D599` (relock từ `5375-843D`, lý do ở decision log D1) | [Điền] | [Điền] |
+| P0 · Chốt môi trường và vai | C → A, B | `00_setup/mode.json` (slice B1-center), `sensor_context.md`, parking | A, B: slice B1-center trong mode.json; parking 1 ảnh core; sensor_context đủ nội dung | Parking + sensor_context đã có; nháp sampling 200 frame + gold set 4 camera ở commit `e71cfdd`, C sẽ kiểm và hoàn thiện ở P6 |
+| P2 · Khóa bản đầu | A → B, C | `r1_craft/annotations.xml`, `lock.txt`, slice B1-center, code `1277-D599` (relock từ `5375-843D`, lý do ở decision log D1) | C: SHA-256 `annotations.xml` khớp `1277-D599`; selfqc 9/9; 5 dòng `r1_craft`; relock trước QA | Đã bàn giao cho B để QA mù |
 | P3 · Chốt QA mù | B → C, A | [review, findings, ảnh, commit] | [Điền] | [Điền] |
 | P4 · Quyết định sửa | C → A, B | [finding, decision log, commit] | [Điền] | [Điền] |
 | P5 · Kiểm bản sửa | A → B → C | [v2, lock2, review kiểm lại, delta] | [Điền] | [Điền] |
