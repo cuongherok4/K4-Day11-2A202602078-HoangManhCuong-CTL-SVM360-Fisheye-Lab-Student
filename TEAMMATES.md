@@ -47,4 +47,4 @@ Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thu
 - [x] C xác nhận báo cáo đúng bản khóa, các file đầy đủ và check exit 0: Trịnh Nam Trung — SHA r1 `1277-D599` và v2 `8D7F-BEDD` khớp file; `triage` hợp lệ; `check` exit 0 (manifest commit [`8bb749d`](https://github.com/cuongherok4/K4-Day11-2A202602078-HoangManhCuong-CTL-SVM360-Fisheye-Lab-Student/commit/8bb749d), 37 file, `failed_gates` rỗng)
 - [x] manifest.json tại commit chốt có failed_gates rỗng.
 - [x] Repo nhóm Public, ảnh và các bằng chứng mở được.
-- [ ] C đã push và gửi link repo nhóm + commit qua kênh lớp công bố.
+- [x] C đã push và gửi link repo nhóm + commit qua kênh lớp công bố: Trịnh Nam Trung — repo `K4-Day11-2A202602078-HoangManhCuong-CTL-SVM360-Fisheye-Lab-Student`, commit chốt `4b71c7c`.
