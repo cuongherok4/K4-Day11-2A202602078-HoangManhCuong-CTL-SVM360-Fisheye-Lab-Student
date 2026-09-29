@@ -17,7 +17,7 @@
 | Vai | Họ và tên | MSSV | Tên định danh trong mode | Trách nhiệm | Bằng chứng đóng góp |
 |---|---|---|---|---|---|
 | A · Gán nhãn | Hoàng Mạnh Cường | 2A202602078 | cuong | Parking/C0/slice, self-QC, lock, rework | `submission/parking/`, `submission/p1_calib/`, `submission/r1_craft/` (lock `1277-D599`), dòng `calib`/`r1_craft` trong `findings.csv` |
-| B · QA độc lập | Hoàng Văn Long | 2A202602071 | long | Review trước reference, finding QA, kiểm lại ca sửa | [Link file/commit và mô tả phần đã làm] |
+| B · QA độc lập | Hoàng Văn Long | 2A202602071 | long | Review trước reference, finding QA, kiểm lại ca sửa | [QA review](submission/r2_qa/qa_review.md), [overlay](submission/r2_qa/qa_overlay.html), 3 finding r2_qa QA-L01–03 và 3 PNG long-qa trong screenshots; Codex thực hiện theo phân công. Chưa có v2 để kiểm lại. |
 | C · Chẩn đoán & điều phối | Trịnh Nam Trung | 2A202602113 | trung | Báo cáo, phân xử, kế hoạch, tích hợp, check và nộp | [Link file/commit và mô tả phần đã làm] |
 
 Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thuộc quy trình nhiều hồ sơ của CLI; nhóm dùng một slice chung và quy trình A → B → C đã nêu trong hướng dẫn.
@@ -28,7 +28,7 @@ Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thu
 |---|---|---|---|---|
 | P0 · Chốt môi trường và vai | C → A, B | `00_setup/mode.json` (slice B1-center), `sensor_context.md`, parking | A, B: slice B1-center trong mode.json; parking 1 ảnh core; sensor_context đủ nội dung | Parking + sensor_context đã có; nháp sampling 200 frame + gold set 4 camera ở commit `e71cfdd`, C sẽ kiểm và hoàn thiện ở P6 |
 | P2 · Khóa bản đầu | A → B, C | `r1_craft/annotations.xml`, `lock.txt`, slice B1-center, code `1277-D599` (relock từ `5375-843D`, lý do ở decision log D1) | C: SHA-256 `annotations.xml` khớp `1277-D599`; selfqc 9/9; 5 dòng `r1_craft`; relock trước QA | Đã bàn giao cho B để QA mù |
-| P3 · Chốt QA mù | B → C, A | [review, findings, ảnh, commit] | [Điền] | [Điền] |
+| P3 · Chốt QA mù | B → C, A | [review](submission/r2_qa/qa_review.md), QA-L01–03 trong findings, screenshots/long-qa-*.png; mã 1277-D599 | B kiểm SHA, 24 box/3 frame, ignore và rule; chưa xem reference/model B1-center, đã đọc self-QC của A (giới hạn độc lập ghi trong review) | P3 hoàn tất; A xem hình học L9/056040, C phân xử người ngoài xe và class L11/006840; chưa kiểm v2 |
 | P4 · Quyết định sửa | C → A, B | [finding, decision log, commit] | [Điền] | [Điền] |
 | P5 · Kiểm bản sửa | A → B → C | [v2, lock2, review kiểm lại, delta] | [Điền] | [Điền] |
 | P6 · Chốt nộp | A, B → C | [manifest, commit chốt] | [Điền] | [Điền] |
